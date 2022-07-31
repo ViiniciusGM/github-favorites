@@ -72,7 +72,6 @@ export class FavoritesView extends Favorites{
     this.removeAllTr()
       this.entries.forEach( user => {
         const row = this.createRow()
-        console.log(row);
 
         row.querySelector('.ico img').src = `https://github.com/${user.login}.png`
         row.querySelector('.ico a').href = `https://github.com/${user.login}`

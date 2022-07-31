@@ -39,6 +39,7 @@ header{
   justify-content: space-around;
 
   margin-top: 8rem;
+  animation: upDown 300ms;
 }
 
 nav {
@@ -89,6 +90,8 @@ table{
   width: 114rem;
   border-collapse: collapse;
   margin: 8rem auto;
+
+  animation: downUp 300ms;
 }
 
 tbody tr:last-child td:last-child{
@@ -147,6 +150,10 @@ td img{
   border-radius: 9999px;
 }
 
+tbody tr:hover{
+  border: 2px solid #4A808C;
+}
+
 .empt-list span {
   font-size: 4rem;
   font-weight: bold;
@@ -179,13 +186,43 @@ td{
 
 td button {
   background-color: transparent;
-  color: red;
+  color: rgb(238, 68, 68);
   cursor: pointer;
   border: none;
+}
+
+td button:hover{
+  transform: scale(1.3);
+  transition-duration: 200ms;
+  color: rgb(255, 0, 0);
 }
 
 .img-empty{
   height: 12rem;
   width: 13rem;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+  
+@keyframes downUp {
+  0%{
+    transform: translateY(25px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+    }
 }
 
