@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+.page {
+  margin: 0 auto;
+  width: 144rem;
+}
+
+body{
+  font-size: 1.6rem;
+  background-color: black;
+}
+
+.sr-only {  
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 8rem;
+}
+
+nav {
+  display: flex;
+  gap: .8rem;
+}
+
+nav input {
+  width: 46rem;
+  height: 4.8rem;
+  background-color: #06181C;
+  padding: 1.6rem;
+  color: white;
+
+  border-radius: .8rem;
+  border: none;
+}
+
+nav input::-webkit-input-placeholder {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav button {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: 1.2rem 3.2rem;
+  color: white;
+
+  background: #065E7C;
+
+  border: none;
+  border-radius: .8rem;
+
+  cursor: pointer;
+}
+
+nav button:hover{
+  background-color: #fff;
+  color: #065E7C;
+}
+
+button:hover svg path {
+  fill:#065E7C;
+}
+
+table{
+  width: 114rem;
+  border-collapse: collapse;
+  margin: 8rem auto;
+}
+
+tbody tr:last-child td:last-child{
+  border-radius: 0 0 12px 0;
+}
+
+tbody tr:last-child td:first-child{
+  border-radius: 0 0 0 12px;
+}
+
+table * {
+  color: white;
+}
+
+td {
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.names a {
+  text-decoration: none;
+}
+
+td .gitname {
+  font-weight: 400;
+}
+
+thead{
+  background: #092D38;
+}
+
+table th {
+  text-align: left;
+  padding: 1.6rem;
+
+  padding-block: 1.6rem;
+}
+
+table th:first-child{
+  border-top-left-radius: .8rem;
+  padding-left: 4rem;
+}
+
+table th:last-child{
+  border-top-right-radius: .8rem;
+}
+
+table tr:nth-child(even){
+  background-color: #06181C;
+}
+
+td img{
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 9999px;
+}
+
+.empt-list span {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 47%;
+  color: #4E5455
+} 
+
+table td.empt-list {
+  text-align: center;
+  padding: 30rem;
+}
+
+.table-empty {
+  width: 70rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+td{
+  background-color: #06161B80;
+}
+
+.ico {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+td button {
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  border: none;
+}
+
+.img-empty{
+  height: 12rem;
+  width: 13rem;
+}
+
