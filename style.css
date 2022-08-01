@@ -154,17 +154,17 @@ tbody tr:hover{
   border: 2px solid #4A808C;
 }
 
-.empt-list span {
+table td.empty-list {
+  text-align: center;
+  padding: 30rem;
+}
+
+.empty-list span {
   font-size: 4rem;
   font-weight: bold;
   line-height: 47%;
   color: #4E5455
 } 
-
-table td.empt-list {
-  text-align: center;
-  padding: 30rem;
-}
 
 .table-empty {
   width: 70rem;

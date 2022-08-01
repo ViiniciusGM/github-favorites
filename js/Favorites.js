@@ -12,7 +12,7 @@ export class Favorites{
 
   async add(value){
     try{
-      const userExist = this.entries.find(entry => entry.login === value)
+      const userExist = this.entries.find(entry => entry.login.toLowerCase() === value)
       
       if(userExist){
         throw new Error("O usuário já existe")
@@ -64,7 +64,7 @@ export class FavoritesView extends Favorites{
     addButton.onclick = () => {
       const { value } = this.root.querySelector('#input-search')
 
-      this.add(value)
+      this.add(value);
     }
   }
 
@@ -83,7 +83,7 @@ export class FavoritesView extends Favorites{
         row.querySelector('.seguidores span').innerHTML = `${user.followers}`
 
         row.querySelector('.remove button').addEventListener('click', () =>{
-          const confirmed = confirm("Tem certeze que deseja deletar essa linha?")
+          const confirmed = confirm(`Tem certeza que deseja remover a linha de ${user.login} `)
 
             if(confirmed){
               this.delete(user)
@@ -96,8 +96,8 @@ export class FavoritesView extends Favorites{
       let tbl = document.getElementById("table").rows.length
 
       if(tbl == 1){
-        const emptRow = this.imageTable();
-        this.tbody.append(emptRow);
+        const emptyRow = this.imageTable();
+        this.tbody.append(emptyRow);
       }
   }
 
@@ -105,7 +105,7 @@ export class FavoritesView extends Favorites{
     const trImg = document.createElement('tr')
 
     trImg.innerHTML = `
-      <td class="empt-list" colspan="4">
+      <td class="empty-list" colspan="4">
       <div class="table-empty">
         <img src="images/tablestar.svg" class="img-empty">
         <span>Nenhum favorito ainda</span>
