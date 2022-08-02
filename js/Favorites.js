@@ -12,7 +12,7 @@ export class Favorites{
 
   async add(value){
     try{
-      const userExist = this.entries.find(entry => entry.login.toLowerCase() === value)
+      const userExist = this.entries.find(entry => entry.login.toLowerCase() === value.toLowerCase())
       
       if(userExist){
         throw new Error("O usuário já existe")
